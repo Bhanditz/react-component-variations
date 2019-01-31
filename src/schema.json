@@ -23,6 +23,14 @@
       "minItems": 1,
       "uniqueItems": true
     },
+    "sync": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
     "consumerOptionsObject": {
       "allOf": [
         { "$ref": "#/definitions/defaultConsumerOptions" },
@@ -68,7 +76,8 @@
         "createdAt": { "type": "time-date" },
         "variations": { "$ref": "#/definitions/variations" },
         "options": { "$ref": "#/definitions/options" },
-        "metadata": { "$ref": "#/definitions/metadata" }
+        "metadata": { "$ref": "#/definitions/metadata" },
+        "sync": { "$ref": "#/definitions/sync" }
       },
       "required": ["component", "variations"],
       "additionalProperties": false
